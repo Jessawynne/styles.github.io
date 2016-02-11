@@ -1,25 +1,18 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html>
 
-  <title>Jessawynne | Software Developer</title>
+{% include head.html %}
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Language" content="en-us" />
+<body>
 
-  <META NAME="keywords" CONTENT="nashville web design, freelance web, nashville freelance web, jessawynne parker, jessa parker, developer, programmer, web development, freelance web developer, html5, html5 developer, html5 website design, css3, front end, front-end, front end developer">
-  <META NAME="description" CONTENT="Jessawynne is the creative works of developer, Jessawynne Parker, based out of Nashville, TN.">
+  {% include header.html %}
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <div class="page-content">
+    {{content}}
+  </div>
 
-  <!-- !STYLESHEETS -->
-  <link rel="stylesheet" type="text/css" href="">
-
-</head>
-
-<body class="home">
-  
-  {{content}}
+  {% include footer.html %}
+  {% include scripts.html %}
 
 </body>
 </html>
