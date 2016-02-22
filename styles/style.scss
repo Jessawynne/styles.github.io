@@ -1,14 +1,19 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+$font: 'Fjalla One', sans-serif;
+$font-two: 'Sacramento', cursive;
+$font-three: 'Open Sans', sans-serif;
 
 html, body {
+  background-color: rgb(202,216,229);
+  background: url('../img/blue-img.png');
   position: relative;
   width: 100%;
 }
 
 html {
-  background-color: #f5faff;
+  background-color: rgb(202,216,229);
   overflow-x: hidden;
   height: 100%;
   font-size: 0;
@@ -19,14 +24,11 @@ body {
 }
 
 section {
-  padding-top: 5vw;
-  padding-bottom: 2vw;
-  background-color: #e9eef2;
+  padding-top: 4vw;
+  background-color: rgb(151,174,208);
   position: relative;
   display: block;
 }
-
-
 @media screen and (max-width: 300px) {
   section {
     padding-top: 15px;
@@ -54,26 +56,68 @@ section:last-of-type {
 .cover {
   height: 100vh;
   box-sizing: border-box;
-  background-color: #ff3747;
+  background: url('../img/lt-blue-gray-stripes.png');
+  background-color: rgb(26,126,148);
   z-index: 3;
 }
-.cover h1 {
+.cover div {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  padding: 5vw;
-  background-color: #f5faff;
-  line-height: 75%;
-  color: #ff3747;
-  display: inline-block;
+  padding: 2vw;
+  background: url('../img/blue-img.png');
+  border-radius: 3px;
+  box-shadow: 7px 7px 5px #999999;
+  width: 45%;
+  height: 50%;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 30%;
+}
+  h1.hithere {
+    color: rgb(0,0,0);
+    font-family: $font;
+    text-align: center;
+    letter-spacing: 0;
+    font-weight: bolder;
+    display: block;
+    padding-top: 6vw;
+    padding-bottom; 0;
+    .hi {
+      font-size: 250px;
+    }
+    .there {
+      font-size: 65px;    
+    }
+  } 
+
+.cover h2 {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 3vw;
+  width: 75%;
+  line-height: 75%;
+  font-family: $font-two;
+  font-weight: bolder;
+  letter-spacing: 0;
+  color: rgb(0,0,0);
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 65%;
 }
 @media screen and (max-width: 300px) {
-  .cover h1 {
-    padding: 15px;
+  .cover div {
+    padding: 10px;
   }
-}
+  span.hi {
+      font-size: 100px;
+    }
+  span.there {
+      font-size: 45px;    
+    }
+  } 
+
 @media screen and (min-width: 1200px) {
   .cover h1 {
     padding: 60px;
@@ -82,16 +126,15 @@ section:last-of-type {
 .cover p {
   padding: 2vw;
   bottom: 2vw;
-  color: #f5faff;
+  color: rgb(26,126,148);
   position: absolute;
   box-sizing: border-box;
   width: 100%;
   text-align: center;
-  font-size : 26px;
 }
 @media screen and (max-width: 500px) {
   .cover p {
-    padding: 10px;
+    padding: 5px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -110,15 +153,13 @@ section:last-of-type {
   }
 }
 .cover p:before {
-  // content: "";
   bottom: 1vw;
   position: absolute;
   left: 50%;
-  border-top: 6px solid #f5faff;
+  border-top: 6px solid rgb(202,216,229);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   margin-left: -6px;
-  font-size : 26px;
 }
 @media screen and (min-width: 1000px) {
   .cover p:before {
@@ -131,7 +172,7 @@ section:last-of-type {
   text-align: center;
 }
 .content div {
-  background-color: #f5faff;
+  background-color: rgb(202,216,229);
   padding-top: 5vw;
   box-sizing: border-box;
   display: inline-block;
@@ -198,10 +239,13 @@ section:last-of-type {
 }
 .content div img:hover {
   opacity: 1;
+  text-decoration: none;
 }
 
 nav {
-  background-color: #050f1e;
+  padding: 5vw;
+  background: url('../img/blue-img.png');
+  text-decoration: none;
   position: fixed;
   text-align: center;
   z-index: 2;
@@ -216,26 +260,23 @@ nav {
 }
 @media screen and (min-width: 800px) {
   nav {
-    padding: 20px;
+    padding: 10px;
   }
 }
 nav a {
+  padding: 4vw;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  padding : 10px 13px;
   display: inline-block;
-  color: #f5faff;
+  color: rgb(151,174,208);
   text-decoration: none;
   text-transform: uppercase;
-  font-size : 26px;
-  top   : 0;
-  position        : relative;
-  color : #FFF;     
-  transition : all .4s;
+  border-left: 1px solid #585e68;
+  border-left: 1px solid #585e68;
 }
 @media screen and (max-width: 75px) {
   nav a {
-    padding: 10px;
+    padding: 3px;
   }
 }
 @media screen and (min-width: 500px) {
@@ -247,19 +288,10 @@ nav a:first-of-type {
   border-left: none;
 }
 
-span.nav-left {
-  float: left;
-}
-
-
-span.nav-right {
-  float: right;
-}
-
-h1, h2, h3, p {
-  letter-spacing: 0.05em;
+h1, h2, h3 {
+  letter-spacing: 0.15em;
   line-height: 135%;
-  font-family: "Titillium Web", sans-serif;
+  // font-family: $font;
 }
 
 h1, h3 {
@@ -267,24 +299,24 @@ h1, h3 {
 }
 
 h1 {
-  font-size: 12vw;
-  color: #ff3747;
+  font-size: 8vw;
+  color: rgb(26,126,148);
 }
 @media screen and (max-width: 250px) {
   h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1000px) {
   h1 {
-    font-size: 120px;
+    font-size: 100px;
   }
 }
 
 h2 {
   font-size: 10vw;
   text-align: center;
-  color: #ff3747;
+  color: rgb(26,126,148);
 }
 @media screen and (max-width: 200px) {
   h2 {
@@ -299,6 +331,9 @@ h2 {
 
 p {
   font-size: 4vw;
+  letter-spacing: 0.15em;
+  line-height: 135%;
+  font-family: $font-three;
 }
 @media screen and (max-width: 350px) {
   p {
@@ -323,28 +358,20 @@ h3 {
   h3 {
     font-size: 15px;
   }
-} 
-
-p.info-details {
-  text-align: justify;
 }
 
-body {
-  background-color: #ff3747;
-}
-
+// start contact link in work section
 .boxy {
-    margin: 2% 15% 2% 15%;
+    margin: 0 0 0 10%;
     padding: 0;
     display: block;
     text-align: center;
     width: 220px;
-    height: 220px; 
+    height: 220px;
 }
  
 .boxy:after,
 .inner-item:before {
-    content: '';
     display: table;
 }
  
@@ -389,7 +416,7 @@ body {
     margin: 0 30px;
     padding: 75px 0 0 0;
     height: 100px;
-    font-family: Arial, sans-serif;
+    font-family: $font-three;
     font-weight: 700;
     text-shadow: 
         0 0 1px #fff, 
@@ -404,7 +431,7 @@ body {
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 1px;
-    font-family: Arial, sans-serif;
+    font-family: $font-three;
     margin: 140px 30px;
     border-top: 5px solid rgba(255,255,255,0.5);
     opacity: 0;
@@ -420,7 +447,7 @@ body {
     font-size: 11px;
     letter-spacing: 2px;
     padding-top: 7px;
-    font-family: Arial, sans-serif;
+    font-family: $font-three;
     text-decoration:none;
 }
  
@@ -446,4 +473,6 @@ body {
 .inner-item:hover .sub p {
     opacity: 1;
 }
+// end contact link in work section
+
 
