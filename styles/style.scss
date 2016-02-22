@@ -1,173 +1,132 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
-$font: 'Fjalla One', sans-serif;
+$font-one: 'Fjalla One', sans-serif;
 $font-two: 'Sacramento', cursive;
 $font-three: 'Open Sans', sans-serif;
 
+$color-one: rgb(202,216,229);
+$color-two: rgb(151,174,208);
+$color-three: rgb(26,126,148);
+$color-main: rgb(0,0,0);
+
 html, body {
-  background-color: rgb(202,216,229);
-  background: url('../img/blue-img.png');
+  background-color: $color-three;
   position: relative;
   width: 100%;
 }
-
 html {
-  background-color: rgb(202,216,229);
+  background-color: $color-one;
   overflow-x: hidden;
   height: 100%;
-  font-size: 0;
 }
-
 body {
   overflow: hidden;
 }
-
 section {
   padding-top: 4vw;
-  background-color: rgb(151,174,208);
+  background-color: $color-two;
   position: relative;
   display: block;
 }
-@media screen and (max-width: 300px) {
-  section {
-    padding-top: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section {
-    padding-top: 60px;
-  }
-}
 section:last-of-type {
   padding-bottom: 5vw;
-}
-@media screen and (max-width: 300px) {
-  section:last-of-type {
-    padding-bottom: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section:last-of-type {
-    padding-bottom: 60px;
-  }
 }
 .cover {
   height: 100vh;
   box-sizing: border-box;
   background: url('../img/lt-blue-gray-stripes.png');
-  background-color: rgb(26,126,148);
+  background-color: $color-three;
   z-index: 3;
 }
 .cover div {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  padding: 1vw;
-  padding-top: 3vh;
   background: url('../img/blue-img.png');
+  box-shadow: 5px 5px 3px rgb(153,153,153);
   border-radius: 3px;
-  box-shadow: 7px 7px 5px #999999;
-  width: 28vw;
-  height: 60vh;
+  padding: 1vw;
   position: absolute;
   left: 50%;
   top: 40%;
+  width: 50vw;
+  height: 35vh;
 }
-  h1.hithere {
-    color: rgb(0,0,0);
-    font-family: $font;
-    text-align: center;
-    letter-spacing: 0;
-    font-weight: bolder;
-    display: block;
-    padding-top: 1vh;
-    padding-bottom: 0;
-    .hi {
-      font-size: 20vw;
-    }
-    .there {
-      font-size: 6vw;    
-    }
-  } 
-
+h1.hithere {
+  color: $color-main;
+  font-family: $font-one;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 1vw;
+  display: block;
+  padding-top: .3vh;
+  padding-bottom: 0;
+  .hi {
+    font-size: 30vw;
+  }
+  .there {
+    font-size: 8vw;
+  }
+}
 .cover h2 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding: 3vw;
-  width: 75%;
-  line-height: 75%;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  width: 80%;
+  color: $color-main;
   font-family: $font-two;
   font-weight: bolder;
-  font-size: 5vw;
-  letter-spacing: 0;
-  color: rgb(0,0,0);
-  display: inline-block;
-  position: absolute;
   text-align: center;
-  left: 50%;
-  top: 75%;
+  text-transform: none;
+  letter-spacing: 0;
+  display: inline-block;
+  font-size: 9vw;
+  line-height: 75%;
 }
-@media screen and (max-width: 300px) {
-  .cover div {
-    padding: 10px;
-  }
-} 
-
-@media screen and (min-width: 1200px) {
-  .cover h1 {
-    padding: 60px;
-  }
+.cover h3 {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 3vw;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  width: 80%;
+  color: $color-main;
+  font-family: $font-one;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: .8vw;
+  display: inline-block;
+  font-size: 4vw;
+  line-height: 75%;
 }
 .cover p {
   padding: 2vw;
-  bottom: 2vw;
-  color: rgb(26,126,148);
   position: absolute;
-  box-sizing: border-box;
+  bottom: 2vw;
   width: 100%;
+  color: $color-three;
+  box-sizing: border-box;
   text-align: center;
 }
-@media screen and (max-width: 500px) {
-  .cover p {
-    padding: 5px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .cover p {
-    padding: 20px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .cover p {
-    bottom: 10px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .cover p {
-    bottom: 20px;
-  }
-}
 .cover p:before {
-  bottom: 1vw;
   position: absolute;
   left: 50%;
+  bottom: 2vw;
   border-top: 6px solid rgb(202,216,229);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   margin-left: -6px;
 }
-@media screen and (min-width: 1000px) {
-  .cover p:before {
-    bottom: 10px;
-  }
-}
-
 .content {
   z-index: 1;
   text-align: center;
 }
 .content div {
-  background-color: rgb(202,216,229);
+  background-color: $color-one;
   padding-top: 5vw;
   box-sizing: border-box;
   display: inline-block;
@@ -175,28 +134,8 @@ section:last-of-type {
   max-width: 100%;
   width: 900px;
 }
-@media screen and (max-width: 300px) {
-  .content div {
-    padding-top: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .content div {
-    padding-top: 60px;
-  }
-}
 .content div h2, .content div img, .content div p, .content div hr {
   margin-bottom: 5vw;
-}
-@media screen and (max-width: 300px) {
-  .content div h2, .content div img, .content div p, .content div hr {
-    margin-bottom: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .content div h2, .content div img, .content div p, .content div hr {
-    margin-bottom: 60px;
-  }
 }
 .content div img:last-child {
   margin-bottom: 0 !important;
@@ -204,26 +143,6 @@ section:last-of-type {
 .content div h2, .content div p {
   padding-right: 5vw;
   padding-left: 5vw;
-}
-@media screen and (max-width: 300px) {
-  .content div h2, .content div p {
-    padding-right: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .content div h2, .content div p {
-    padding-right: 60px;
-  }
-}
-@media screen and (max-width: 300px) {
-  .content div h2, .content div p {
-    padding-left: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .content div h2, .content div p {
-    padding-left: 60px;
-  }
 }
 .content div img {
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -236,10 +155,9 @@ section:last-of-type {
   opacity: 1;
   text-decoration: none;
 }
-
 nav {
-  padding: 5vw;
-  background: url('../img/blue-img.png');
+  padding: 3vw;
+  background: $color-three;
   text-decoration: none;
   position: fixed;
   text-align: center;
@@ -248,226 +166,28 @@ nav {
   left: 0;
   top: 0;
 }
-@media screen and (max-width: 200px) {
-  nav {
-    padding: 10px;
-  }
-}
-@media screen and (min-width: 800px) {
-  nav {
-    padding: 10px;
-  }
-}
 nav a {
   padding: 4vw;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   display: inline-block;
-  color: rgb(151,174,208);
+  color: $color-one;
   text-decoration: none;
   text-transform: uppercase;
-  border-left: 1px solid #585e68;
-  border-left: 1px solid #585e68;
 }
-@media screen and (max-width: 75px) {
-  nav a {
-    padding: 3px;
-  }
+.cover-brand {
+  font-family: $font-one;
+  letter-spacing: 1vw;
 }
-@media screen and (min-width: 500px) {
-  nav a {
-    padding: 20px;
-  }
-}
-nav a:first-of-type {
-  border-left: none;
-}
-
 h1, h2, h3 {
-  letter-spacing: 0.15em;
-  line-height: 135%;
-  // font-family: $font;
-}
-
-h1, h3 {
+  letter-spacing: .8vw;
+  font-family: $font-one;
   text-transform: uppercase;
 }
-
-h1 {
-  font-size: 8vw;
-  color: rgb(26,126,148);
-}
-@media screen and (max-width: 250px) {
-  h1 {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  h1 {
-    font-size: 100px;
-  }
-}
-
 h2 {
   font-size: 10vw;
   text-align: center;
-  color: rgb(26,126,148);
+  color: $color-three;
 }
-@media screen and (max-width: 200px) {
-  h2 {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 700px) {
-  h2 {
-    font-size: 70px;
-  }
-}
-
-p {
-  font-size: 4vw;
-  letter-spacing: 0.15em;
-  line-height: 135%;
-  font-family: $font-three;
-}
-@media screen and (max-width: 350px) {
-  p {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 525px) {
-  p {
-    font-size: 21px;
-  }
-}
-
-h3 {
-  font-size: 4vw;
-}
-@media screen and (max-width: 250px) {
-  h3 {
-    font-size: 10px;
-  }
-}
-@media screen and (min-width: 375px) {
-  h3 {
-    font-size: 15px;
-  }
-}
-
-// start contact link in work section
-.boxy {
-    margin: 0 0 0 10%;
-    padding: 0;
-    display: block;
-    text-align: center;
-    width: 220px;
-    height: 220px;
-}
- 
-.boxy:after,
-.inner-item:before {
-    display: table;
-}
- 
-.boxy:after {
-    clear: both;
-}
-
-.inner-item {   
-    width:100%;
-    height:100%;
-    background: #aaaaaa;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    cursor: default;
-    margin:20px;
-    box-shadow: 
-        inset 0 0 0 16px rgba(255,255,255,0.6),
-        0 1px 2px rgba(0,0,0,0.1);
-    -webkit-transition: all 0.4s ease-in-out; 
-}
-
-
-.sub {
-    position: absolute;
-    background: rgba(244,130,34, 0.8);
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-    overflow: hidden;
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out;
-    -webkit-transform: scale(0);
-}
-
-.inner-item h3 {
-    position:relative;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 24px;
-    margin: 0 30px;
-    padding: 75px 0 0 0;
-    height: 100px;
-    font-family: $font-three;
-    font-weight: 700;
-    text-shadow: 
-        0 0 1px #fff, 
-        0 1px 1px rgba(0,0,0,0.2);
-}
-
-.sub p {
-    color: #fff;
-    padding: 10px 5px;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-family: $font-three;
-    margin: 140px 30px;
-    border-top: 5px solid rgba(255,255,255,0.5);
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0.8s;
-}
-
-.sub p a {
-    display: block;
-    color: rgba(255,255,255,0.7);
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 2px;
-    padding-top: 7px;
-    font-family: $font-three;
-    text-decoration:none;
-}
- 
-.sub p a:hover {
-    color: rgba(173, 221, 234,1);
-    padding: 5px;
-    border-radius:101px;
-    border: 2px solid #BA611D;
-    background-color:rgba(186, 97, 29,0.1);
-}
-
-.inner-item:hover {
-    box-shadow: 
-        inset 0 0 0 1px rgba(255,255,255,0.8),
-        0 1px 2px rgba(0,0,0,0.1);
-}
-
-.inner-item:hover .sub {
-    -webkit-transform: scale(1);
-    opacity: 1;
-}
-
-.inner-item:hover .sub p {
-    opacity: 1;
-}
-// end contact link in work section
 
 
