@@ -52,7 +52,6 @@ section:last-of-type {
     padding-bottom: 60px;
   }
 }
-
 .cover {
   height: 100vh;
   box-sizing: border-box;
@@ -64,11 +63,11 @@ section:last-of-type {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   padding: 2vw;
+  padding-top: 2vh;
   background: url('../img/blue-img.png');
   border-radius: 3px;
   box-shadow: 7px 7px 5px #999999;
-  width: 45%;
-  height: 50%;
+  width: 30vw;
   position: absolute;
   left: 50%;
   top: 30%;
@@ -80,13 +79,13 @@ section:last-of-type {
     letter-spacing: 0;
     font-weight: bolder;
     display: block;
-    padding-top: 6vw;
-    padding-bottom; 0;
+    padding-top: 8vw;
+    padding-bottom: 0;
     .hi {
-      font-size: 250px;
+      font-size: 20vw;
     }
     .there {
-      font-size: 65px;    
+      font-size: 6vw;    
     }
   } 
 
@@ -98,25 +97,20 @@ section:last-of-type {
   line-height: 75%;
   font-family: $font-two;
   font-weight: bolder;
+  font-size: 6vw;
   letter-spacing: 0;
   color: rgb(0,0,0);
   display: inline-block;
   position: absolute;
   text-align: center;
   left: 50%;
-  top: 65%;
+  top: 72%;
 }
 @media screen and (max-width: 300px) {
   .cover div {
     padding: 10px;
   }
-  span.hi {
-      font-size: 100px;
-    }
-  span.there {
-      font-size: 45px;    
-    }
-  } 
+} 
 
 @media screen and (min-width: 1200px) {
   .cover h1 {
