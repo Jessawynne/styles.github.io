@@ -20,9 +20,9 @@ html {
   overflow-x: hidden;
   height: 100%;
 }
-body {
-  overflow: hidden;
-}
+// body {
+//   overflow: hidden;
+// }
 section {
   padding-top: 4vw;
   background-color: $color-two;
@@ -44,8 +44,8 @@ section:last-of-type {
   box-shadow: 5px 5px 3px rgb(153,153,153);
   border-radius: 3px;
   padding: 1vw;
-  width: 50vw;
-  height: 35vh;
+  width: 160px;
+  height: 200px;
   margin: 0 auto;
 }
 h1.hithere {
@@ -96,49 +96,49 @@ h1.hithere {
   box-sizing: border-box;
   text-align: center;
 }
-.cover p:before {
-  position: absolute;
-  left: 50%;
-  bottom: 2vw;
-  border-top: 6px solid rgb(202,216,229);
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  margin-left: -6px;
-}
+// .cover p:before {
+//   position: absolute;
+//   left: 50%;
+//   bottom: 2vw;
+//   border-top: 6px solid rgb(202,216,229);
+//   border-left: 6px solid transparent;
+//   border-right: 6px solid transparent;
+//   margin-left: -6px;
+// }
 .content {
   z-index: 1;
   text-align: center;
 }
 .content div {
-  background-color: $color-one;
+  // background-color: $color-one;
   padding-top: 5vw;
   box-sizing: border-box;
-  display: inline-block;
+  // display: inline-block;
   text-align: left;
-  max-width: 100%;
-  width: 900px;
+  // max-width: 100%;
+  // width: 900px;
 }
-.content div h2, .content div img, .content div p, .content div hr {
-  margin-bottom: 5vw;
-}
-.content div img:last-child {
-  margin-bottom: 0 !important;
-}
-.content div h2, .content div p {
-  padding-right: 5vw;
-  padding-left: 5vw;
-}
-.content div img {
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0.95;
-  width: 100%;
-  height: auto;
-}
-.content div img:hover {
-  opacity: 1;
-  text-decoration: none;
-}
+// .content div h2, .content div img, .content div p, .content div hr {
+//   margin-bottom: 5vw;
+// }
+// .content div img:last-child {
+//   margin-bottom: 0 !important;
+// }
+// .content div h2, .content div p {
+//   padding-right: 5vw;
+//   padding-left: 5vw;
+// }
+// .content div img {
+//   -webkit-transition: opacity 0.3s ease-in-out;
+//   transition: opacity 0.3s ease-in-out;
+//   opacity: 0.95;
+//   width: 100%;
+//   height: auto;
+// }
+// .content div img:hover {
+//   opacity: 1;
+//   text-decoration: none;
+// }
 nav {
   padding: 3vw;
   background: $color-three;
@@ -174,4 +174,17 @@ h2 {
   color: $color-three;
 }
 
+#section-work h2 {
+  margin-top: 25px;
+}
+
+#section-work img {
+  width: 100%;
+}
+
+#section-work p {
+  padding: 5vw 8vw;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
 
